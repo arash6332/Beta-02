@@ -7,6 +7,7 @@ echo $CELESTIA_VALOPER
 echo 'export CELESTIA_VALOPER='${CELESTIA_VALOPER} >> $HOME/.bash_profile 
 source $HOME/.bash_profile
 ------------------------------------------------
+Ø¨Ø§ÛŒØ¯ Ù…Ù†ØªØ¸Ø± Ø¨Ù…Ø§Ù†ÛŒØ¯ ØªØ§ Ú¯Ø±Ù‡ Validator Ø´Ù…Ø§ Ù‡Ù…Ù‡ Ø¨Ù„ÙˆÚ©â€ŒÙ‡Ø§ Ø±Ø§ Ø§Ø² Ø²Ù†Ø¬ÛŒØ±Ù‡ Ø¨Ù„ÙˆÚ©ÛŒ Ø³Ù„Ø³ØªÛŒØ§ Ø¯Ø§Ù†Ù„ÙˆØ¯ Ú©Ù†Ø¯
 
 celestia-appd keys add $CELESTIA_WALLET
 CELESTIA_VALOPER=$(celestia-appd keys show $CELESTIA_WALLET --bech val -a) 
