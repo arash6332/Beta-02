@@ -35,10 +35,6 @@ echo 'export CELESTIA_ADDR='${CELESTIA_ADDR} >> $HOME/.bash_prof
 celestia-appd init $CELESTIA_NODENAME --chain-id $CELESTIA_CHAIN
 for bridge
 -------------------------------------
-cp $HOME/networks/mamaki/genesis.json $HOME/.celestia-app/config/
-
--------------------------------------
-cp $HOME/networks/mamaki/genesis.json $HOME/.celestia-app/config/
 
 ---------------------------------------
 sed -i 's/mode = \"full\"/mode = \"validator\"/g' $HOME/.celestia-app/config/config.toml
@@ -46,7 +42,10 @@ sed -i 's/mode = \"full\"/mode = \"validator\"/g' $HOME/.celestia-app/config/con
 
 celestia-appd q bank balances xxxmmm
 celestia-appd q bank balances xxxmmm
+cp $HOME/networks/mamaki/genesis.json $HOME/.celestia-app/config/
 
+-------------------------------------
+cp $HOME/networks/mamaki/genesis.json $HOME/.celestia-app/config/
 -------------------------------
 echo 'export CELESTIA_CHAIN='$CELESTIA_CHAIN >> $HOME/.bash_profile
 echo 'export CELESTIA_NODENAME='${CELESTIA_NODENAME} >> $HOME/.bash_profile
