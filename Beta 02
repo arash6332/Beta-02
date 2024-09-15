@@ -39,10 +39,6 @@ sed -i 's/mode = \"full\"/mode = \"validator\"/g' $HOME/.celestia-app/config/con
 celestia-appd q bank balances xxxmmm
 celestia-appd q bank balances xxxmmm
 cp $HOME/networks/mamaki/genesis.json $HOME/.celestia-app/config/
-
--------------------------------------
-cp $HOME/networks/mamaki/genesis.json $HOME/.celestia-app/config/
--------------------------------
 echo 'export CELESTIA_CHAIN='$CELESTIA_CHAIN >> $HOME/.bash_profile
 echo 'export CELESTIA_NODENAME='${CELESTIA_NODENAME} >> $HOME/.bash_profile
 echo 'export CELESTIA_WALLET='${CELESTIA_WALLET} >> $HOME/.bash_profile
@@ -72,7 +68,9 @@ celestia-appd keys add $CELESTIA_WALLET
 
 ------------------------------------------------
 Ø§Ø·Ù„Ø§Ø¹Ø§Øª  Ø¯Ø§Ø®Ù„ "" Ø±Ùˆ Ù¾Ø§Ú© Ú©Ù†ÛŒØ¯(ÙÙ‚Ø· Ø®Ø· Ø§ÙˆÙ„ Ùˆ Ø¯ÙˆÙ…) Ùˆ Ø§Ø·Ù„Ø§Ø¹Ø§Øª Ø®ÙˆØ¯ØªÙˆÙ† Ø±Ùˆ Ù‚Ø±Ø§Ø± Ø¨Ø¯ÛŒ
-
+-------------------------------------
+cp $HOME/networks/mamaki/genesis.json $HOME/.celestia-app/config/
+-------------------------------
 
 -------------------------------
 echo 'export CELESTIA_CHAIN='$CELESTIA_CHAIN >> $HOME/.bash_profile
