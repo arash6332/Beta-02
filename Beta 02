@@ -12,7 +12,6 @@ echo $CELESTIA_VALOPER
 
 Ø§Ø·Ù„Ø§Ø¹Ø§Øª Ø¯Ø±ÛŒØ§ÙØªÛŒ Ø§ÛŒÙ† Ø¨Ø®Ø´ Ø±Ùˆ ØªÙˆÛŒ Ù†ÙˆØª Ù¾Ø¯ Ø¨Ø±Ø§ÛŒ Ø®ÙˆØ¯ØªÙˆÙ† Ø°Ø®ÛŒØ±Ù‡ Ú©Ù†ÛŒØ¯
 -------------------------
-Ø¨Ø§ Ù„ÛŒÙ†Ú© https://discord.gg/celestiacommunityÂ ÙˆØ§Ø±Ø¯ Ø¯ÛŒØ³Ú©ÙˆØ±Ø¯ Ù¾Ø±ÙˆÚ˜Ù‡ Ø¨Ø´ÛŒØ¯ Ùˆ Ø¨Ù‡ Ø¨Ø®Ø´ mamaki faucet  Ø¨Ø±ÛŒØ¯ Ùˆ Ø¨Ù‡ Ø´Ú©Ù„ Ø²ÛŒØ± Ø§Ø¯Ø±Ø³ Ø®ÙˆØ¯ØªÙˆÙ† Ø±Ùˆ ÙˆØ§Ø±Ø¯ Ú©Ù†ÛŒØ¯ Ùˆ Ø¯Ø±Ø®ÙˆØ§Ø³Øª ÙØ§Ø³Øª Ø´Ø¨Ú©Ù‡ Ø±Ùˆ Ø¨Ø¯ÛŒØ¯
 $request celestia1a35035fu83jkeeqz00d3jmt3k5wu5x3lyvn6qp
 ELESTIA_VALOPER=$(celestia-appd keys show $CELESTIA_WALLET --bech val -a) 
 echo $CELESTIA_VALOPER
@@ -20,9 +19,6 @@ echo $CELESTIA_VALOPER
 CELESTIA_ADDR=$(celestia-appd keys show $CELESTIA_WALLET -a) 
 echo $CELESTIA_ADDR 
 echo 'export CELESTIA_ADDR='${CELESTIA_ADDR} >> $HOME/.bash_prof
-
-celestia-appd init $CELESTIA_NODENAME --chain-id $CELESTIA_CHAIN
-for bridge
 -----------------------------------
 CELESTIA_ADDR=$(celestia-appd keys show $CELESTIA_WALLET -a) 
 echo $CELESTIA_ADDR 
@@ -31,7 +27,8 @@ echo 'export CELESTIA_ADDR='${CELESTIA_ADDR} >> $HOME/.bash_prof
 celestia-appd init $CELESTIA_NODENAME --chain-id $CELESTIA_CHAIN
 for bridge
 -------------------------------------
-
+celestia-appd init $CELESTIA_NODENAME --chain-id $CELESTIA_CHAIN
+for bridge
 ---------------------------------------
 sed -i 's/mode = \"full\"/mode = \"validator\"/g' $HOME/.celestia-app/config/config.toml
 Ø¨Ø§ Ú©Ø¯ Ø²ÛŒØ± Ù‡Ù… Ù…ÛŒØªÙˆÙ†ÛŒØ¯ Ù…ÙˆØ¬ÙˆØ¯ÛŒ ÙˆÙ„Øª Ø®ÙˆØ¯ØªÙˆÙ† Ø±Ùˆ Ø¨Ø¨Ù†ÛŒØ¯  Ú©Ù‡ Ø¨Ù‡ Ø¬Ø§ÛŒ Ø§ÛŒÚ©Ø³ Ù‡Ø§ Ø§Ø¯Ø±Ø³ Ø®ÙˆØ¯ØªÙˆÙ† Ø±Ùˆ ÙˆØ§Ø±Ø¯ Ú©Ù†ÛŒØ¯ 
