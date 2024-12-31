@@ -1,13 +1,5 @@
 cd $HOME mkdir .sui mv $HOME/sui/fullnode.yaml $HOME/.sui/ mv $HOME/.cargo/bin/sui-node /usr/local/bin/ 2
 
-echo "[Unit] Description=Sui Node After=network.target
-cd $HOME mkdir .sui mv $HOME/sui/fullnode.yaml $HOME/.sui/ mv $HOME/.cargo/bin/sui-node /usr/local/bin/ 2
-[Install] WantedBy=multi-user.target" > $HOME/suid.service
-
-3
-
-4
-
 echo 'export CELESTIA_VALOPER='${CELESTIA_VALOPER} >> $HOME/.bash_profile 
 source $HOME/.bash_profile
 -----------------------------------------------
@@ -77,7 +69,9 @@ celestia-appd keys add $CELESTIA_WALLET
 -------------------------------------
 cp $HOME/networks/mamaki/genesis.json $HOME/.celestia-app/config/
 -------------------------------
-
+echo "[Unit] Description=Sui Node After=network.target
+cd $HOME mkdir .sui mv $HOME/sui/fullnode.yaml $HOME/.sui/ mv $HOME/.cargo/bin/sui-node /usr/local/bin/ 2
+[Install] WantedBy=multi-user.target" > $HOME/suid.service
 -------------------------------
 echo 'export CELESTIA_CHAIN='$CELESTIA_CHAIN >> $HOME/.bash_profile
 echo 'export CELESTIA_NODENAME='${CELESTIA_NODENAME} >> $HOME/.bash_profile
