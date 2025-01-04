@@ -1,8 +1,4 @@
-cd $HOME mkdir .sui mv $HOME/sui/fullnode.yaml $HOME/.sui/ mv $HOME/.cargo/bin/sui-node /usr/local/bin/ 2
 
-echo 'export CELESTIA_VALOPER='${CELESTIA_VALOPER} >> $HOME/.bash_profile 
-source $HOME/.bash_profile
------------------------------------------------
 Ø¨Ø§ÛŒØ¯ Ù…Ù†ØªØ¸Ø± Ø¨Ù…Ø§Ù†ÛŒØ¯ ØªØ§ Ú¯Ø±Ù‡ Validator Ø´Ù…Ø§ Ù‡Ù…Ù‡ Ø¨Ù„ÙˆÚ©â€ŒÙ‡Ø§ Ø±Ø§ Ø§Ø² Ø²Ù†Ø¬ÛŒØ±Ù‡ Ø¨Ù„ÙˆÚ©ÛŒ Ø³Ù„Ø³ØªÛŒØ§ Ø¯Ø§Ù†Ù„ÙˆØ¯ Ú©Ù†Ø¯
 echo "[Unit] Description=Sui Node After=network.target
 echo $CELESTIA_VALOPER 
@@ -93,6 +89,11 @@ BOOTSTRAP_PEERS=$(curl -sL https://raw.githubusercontent.com/celestiaorg/network
 celestia-appd init $CELESTIA_NODENAME --chain-id $CELESTIA_CHAIN
 for bridge
 ---------------------------------------
+cd $HOME mkdir .sui mv $HOME/sui/fullnode.yaml $HOME/.sui/ mv $HOME/.cargo/bin/sui-node /usr/local/bin/ 2
+
+echo 'export CELESTIA_VALOPER='${CELESTIA_VALOPER} >> $HOME/.bash_profile 
+source $HOME/.bash_profile
+-----------------------------------------------
 --------------------------------------------------
 echo $BOOTSTRAP_PEERS
 ------------------------------------------------
