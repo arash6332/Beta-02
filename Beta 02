@@ -31,7 +31,14 @@ source $HOME/.bash_profile
 CELESTIA_ADDR=$(celestia-appd keys show $CELESTIA_WALLET -a) 
 echo $CELESTIA_ADDR 
 echo 'export CELESTIA_ADDR='${CELESTIA_ADDR} >> $HOME/.bash_prof
+CELESTIA_ADDR=$(celestia-appd keys show $CELESTIA_WALLET -a) 
+echo $CELESTIA_ADDR 
+echo 'export CELESTIA_ADDR='${CELESTIA_ADDR} >> $HOME/.bash_prof
 
+celestia-appd init $CELESTIA_NODENAME --chain-id $CELESTIA_CHAIN
+CELESTIA_ADDR=$(celestia-appd keys show $CELESTIA_WALLET -a) 
+echo $CELESTIA_ADDR 
+echo 'export CELESTIA_ADDR='${CELESTIA_ADDR} >> $HOME/.bash_prof
 sudo apt update && sudo apt upgrade -y
 ---------------------------------------------
 sudo apt install curl tar wget clang pkg-config libssl-dev jq build-essential bsdmainutils git make ncdu -y
