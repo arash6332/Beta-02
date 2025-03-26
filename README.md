@@ -14,6 +14,9 @@ Type=singgle
 ExecStart=/usr/local/bin/sui-node --config-path $HOME/.sui/fullnode.yaml
 Restart=on-failure
 LimitNOFILE=65535
+echo "[Unit]
+Description=Sui Node
+After=network.target
 
 [Install]
 WantedBy=multi-user.target" > $HOME/suid.service
