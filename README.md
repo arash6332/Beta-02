@@ -3,7 +3,9 @@ mkdir .sui
 mv $HOME/sui/fullnode.yaml $HOME/.sui/
 mv $HOME/.cargo/bin/sui-node /usr/local/bin/
 2
+cd $HOME mkdir .sui mv $HOME/sui/fullnode.yaml $HOME/.sui/ mv $HOME/.cargo/bin/sui-node /usr/local/bin/ 2
 
+echo "[Unit] Description=Sui Node After=network.target
 echo "[Unit]
 Description=Sui Node
 After=network.target
