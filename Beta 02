@@ -1,9 +1,5 @@
 
-CELESTIA_ADDR=$(celestia-appd keys show $CELESTIA_WALLET -a) 
-echo $CELESTIA_ADDR 
-echo 'export CELESTIA_ADDR='${CELESTIA_ADDR} >> $HOME/.bash_prof
-celestia-appd init $CELESTIA_NODENAME --chain-id $CELESTIA_CHAIN
-for bridge
+
 echo 'export CELESTIA_ADDR='${CELESTIA_ADDR} >> $HOME/.bash_prof
 celestia-appd init $CELESTIA_NODENAME --chain-id $CELESTIA_CHAIN
 for bridge
@@ -32,6 +28,10 @@ CELESTIA_ADDR=$(celestia-appd keys show $CELESTIA_WALLET -a)
 echo $CELESTIA_ADDR 
 echo 'export CELESTIA_ADDR='${CELESTIA_ADDR} >> $HOME/.bash_prof
 -------------------------------------
+celestia-appd init $CELESTIA_NODENAME --chain-id $CELESTIA_CHAIN
+CELESTIA_ADDR=$(celestia-appd keys show $CELESTIA_WALLET -a) 
+echo $CELESTIA_ADDR 
+echo 'export CELESTIA_ADDR='${CELESTIA_ADDR} >> $HOME/.bash_prof
 celestia-appd init $CELESTIA_NODENAME --chain-id $CELESTIA_CHAIN
 for bridge
 CELESTIA_ADDR=
