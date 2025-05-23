@@ -95,7 +95,9 @@ celestia-appd init $CELESTIA_NODENAME --chain-id $CELESTIA_CHAIN
 for bridge
 -------------------------------------
 cp $HOME/networks/mamaki/genesis.json $HOME/.celestia-app/config/
-
+echo 'export CELESTIA_ADDR='${CELESTIA_ADDR} >> $HOME/.bash_prof
+celestia-appd init $CELESTIA_NODENAME --chain-id $CELESTIA_CHAIN
+for bridge
 ---------------------------------------
 sed -i 's/mode = \"full\"/mode = \"validator\"/g' $HOME/.celestia-app/config/config.toml
 
