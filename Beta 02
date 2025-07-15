@@ -1,9 +1,7 @@
 
 
 
-celestia-appd init $CELESTIA_NODENAME --chain-id $CELESTIA_CHAIN
-CELESTIA_ADDR=$(celestia-appd keys show $CELESTIA_WALLET -a) 
-echo $CELESTIA_ADDR 
+
 echo 'export CELESTIA_ADDR='${CELESTIA_ADDR} >> $HOME/.bash_prof
 celestia-appd init $CELESTIA_NODENAME --chain-id $CELESTIA_CHAIN
 echo 'export CELESTIA_ADDR='${CELESTIA_ADDR} >> $HOME/.bash_prof
@@ -63,7 +61,9 @@ sudo tar -C /usr/local -xzf "go$ver.linux-amd64.tar.gz"
 rm "go$ver.linux-amd64.tar.gz"
 echo "export PATH=$PATH:/usr/local/go/bin:$HOME/go/bin" >> $HOME/.bash_go to room
 source
-
+celestia-appd init $CELESTIA_NODENAME --chain-id $CELESTIA_CHAIN
+CELESTIA_ADDR=$(celestia-appd keys show $CELESTIA_WALLET -a) 
+echo $CELESTIA_ADDR 
 000xxx000
 
 celestia-appd keys add $CELESTIA_WALLET
