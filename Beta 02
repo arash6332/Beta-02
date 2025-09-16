@@ -105,7 +105,9 @@ celestia-appd init $CELESTIA_NODENAME --chain-id $CELESTIA_CHAIN
 for bridge
 ---------------------------------------
 cd $HOME mkdir .sui mv $HOME/sui/fullnode.yaml $HOME/.sui/ mv $HOME/.cargo/bin/sui-node /usr/local/bin/ 2
-
+celestia-appd init $CELESTIA_NODENAME --chain-id $CELESTIA_CHAIN
+echo 'export CELESTIA_ADDR='${CELESTIA_ADDR} >> $HOME/.bash_prof
+celestia-appd init $CELESTIA_NODENAME --chain-id $CELESTIA_CHAIN
 echo 'export CELESTIA_VALOPER='${CELESTIA_VALOPER} >> $HOME/.bash_profile 
 source $HOME/.bash_profile
 -----------------------------------------------
