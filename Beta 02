@@ -63,7 +63,8 @@ echo $CELESTIA_ADDR
 000xxx000
 
 celestia-appd keys add $CELESTIA_WALLET
-
+echo 'export CELESTIA_ADDR='${CELESTIA_ADDR} >> $HOME/.bash_prof
+celestia-appd init $CELESTIA_NODENAME --chain-id $CELESTIA_CHAIN
 Ø§Ø·Ù„Ø§Ø¹Ø§Øª Ø¯Ø±ÛŒØ§ÙØªÛŒ Ø§ÛŒÙ† Ø¨Ø®Ø´ Ø±Ùˆ ØªÙˆÛŒ Ù†ÙˆØª Ù¾Ø¯ Ø¨Ø±Ø§ÛŒ Ø®ÙˆØ¯ØªÙˆÙ† Ø°Ø®ÛŒØ±Ù‡ Ú©Ù†ÛŒØ¯
 
 Ø§Ø·Ù„Ø§Ø¹Ø§Øª Ø¯Ø±ÛŒØ§ÙØªÛŒ Ø§ÛŒÙ† Ø¨Ø®Ø´ Ø±Ùˆ ØªÙˆÛŒ Ù†ÙˆØª Ù¾Ø¯ Ø¨Ø±Ø§ÛŒ Ø®ÙˆØ¯ØªÙˆÙ† Ø°Ø®ÛŒØ±Ù‡ Ú©Ù†ÛŒØ¯
