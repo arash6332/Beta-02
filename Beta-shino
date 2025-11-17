@@ -1,0 +1,34 @@
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.0;
+
+import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
+import "@openzeppelin/contracts/access/Ownable.sol";
+
+/**
+ * @title MyToken
+ * @dev An ERC-20 token implementation with an initial supply minted to the contract deployer (owner).
+ * The token symbol is MTK and the name is My Token.
+ */
+contract MyToken is ERC20, Ownable {
+    /**
+     * @dev Constructor is executed only once upon contract deployment.
+     * It sets the token's name and symbol, and mints the initial supply
+     * to the address that deploys the contract (msg.sender).
+     * @param initialSupply The total amount of tokens to create initially.
+     */
+    constructor(uint256 initialSupply) ERC20("My Token", "MTK") {
+        // Mint the initial supply and send it to the deployer's address (msg.sender).
+        _mint(msg.sender, initialSupply);
+    }
+
+    // Optional: Add a function to allow the owner to mint more tokens later (if desired)
+    /*
+    function mint(address to, uint256 amount) public onlyOwner {
+        _mint(to, amount);
+    }
+    */
+}
+npm init -y
+npm install hardhat
+npx hardhat
+npm install @openzeppelin/contracts
