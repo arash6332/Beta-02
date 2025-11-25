@@ -1,0 +1,32 @@
+@@ -0,0 +1,31 @@
+def greet(name: str) -> str:
+    """Return a friendly greeting message."""
+    return f"Hello, {name}! Welcome to this GitHub project."
+
+if __name__ == "__main__":
+    user_name = input("Enter your name: ")
+    print(greet(user_name))
+# Simple Greeting Project
+
+This is a basic Python project that prints a friendly greeting.  
+You can clone the repository, run the script, and customize it as you wish.
+
+## How to Run
+
+1. Make sure you have **Python 3.8+** installed.
+2. Clone the repository:
+
+```bash
+git clone https://github.com/your-username/your-repo-name.git
+python main.py
+
+---
+
+If you want, I can also create:
+
+✅ a complete project with folders  
+✅ a GitHub Actions CI/CD workflow  
+✅ a more advanced Python/JavaScript/React project  
+✅ a ready-to-upload zip file
+
+Just tell me!
